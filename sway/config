@@ -8,15 +8,15 @@ exec dunst &
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+#set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-set $volup pulsemixer --change-volume 5
-set $voldown pulsemixer --change-volume -5
-
+set $volup playerctl volume 0.05+
+set $voldown playerctl volume 0.05-
+set $mod Mod4
 #playerctl
 set $minfo playerctl metadata
 
@@ -26,6 +26,7 @@ set $previous playerctl previous
 set $metadata $minfo title ; $minfo artist
 set $data2 $minfo album ;  $minfo albumArtist
 set $previous playerctl previous
+set $replay playerctl stop && playerctl play
 
 # Your preferred terminal emulator
 set $term alacritty
@@ -103,7 +104,8 @@ xwayland enable
     bindsym $mod+c exec $plps
     bindsym $mod+b exec $next
     bindsym $mod+z exec $previous
-    bindsym $mod+m exec notify-send "$($metadata)" ; notify-send "$($metadata2)"
+    bindsym $mod+m exec notify-send "$($metadata)" && notify-send " $($data2)"
+    bindsym $mod+x exec $replay
 
     # brightness(ctl)
     bindsym $mod+Equal exec brightnessctl s +1
