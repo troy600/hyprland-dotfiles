@@ -63,8 +63,12 @@ tooltip {
     color: @color13;
 }
 
+#temperature {
+    color : @color13;
+}
+
 #temperature.critical {
-    color: #eba0ac;
+    color: @color15;
 }
 
 #tray {

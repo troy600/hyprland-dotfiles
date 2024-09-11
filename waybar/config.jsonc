@@ -43,6 +43,7 @@
 	"clock": {
 		"format": "{:%H:%M}",
 		"tooltip-format": "{calendar}",
+		"timezone": "localtime",
 		"calendar": {
 			"format": {
 				"months": "<span color='#ffead3'><b>{}</b></span>",
@@ -80,8 +81,8 @@
 		"format-muted": " Muted",
 		"on-click": "pavucontrol",
 		"on-click-right": "pavucontrol",
-		//"on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_SINK@ 5%+",
-		//"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
+		"on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_SINK@ 5%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
 		"scroll-step": 5,
 		"format-icons": {
 			"headphone": "",
