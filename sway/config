@@ -1,4 +1,3 @@
-exec dunst &
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -83,11 +82,13 @@ input * {
 }
 
 #here is the switches
+exec dunst &
 exec notify-send "running sway with wayland" & waybar &
 default_border pixel 5
 exec ~/.config/sway/wallpaper.sh &
 exec notify-send "Xwayland sucessfull" &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 
 #wayland support cause why not?
 xwayland enable
