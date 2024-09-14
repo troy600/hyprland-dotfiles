@@ -1,8 +1,8 @@
 {
 	"layer": "top",
 	"position": "top",
-	"margin": "0 10 0",
-	"mod": "dock",
+	"margin": "0 0",
+	"mod": "bar",
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
@@ -25,6 +25,18 @@
 	"sway/window": {
 		"format": "{}"
 	},
+	"custom/power": {
+            "format" : "⏻ ",
+            "tooltip": false,
+            "menu": "on-click",
+            "menu-file": "~/.config/waybar/power_menu.xml",
+            "menu-actions": {
+                "shutdown": "shutdown",
+                "reboot": "reboot",
+                "suspend": "systemctl suspend",
+                "hibernate": "systemctl hibernate"
+                     }
+           },
 	"sway/workspaces": {
 		"all-outputs": true,
 		"on-click": "activate",
@@ -61,7 +73,8 @@
 		"min-length": 6
 	},
     "cpu": {
-        "format": "{usage}% {load}?"
+        "format": "{usage}% {load}?",
+    "interval": "1s"
     },
 	"battery": {
 		"states": {
@@ -100,8 +113,8 @@
 		"format-source-muted": " Muted",
 		"on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
 		"on-click-right": "pavucontrol",
-		"on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_SOURCE@ 5%+",
-		"on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_SOURCE@ 5%-",
+		"on-scroll-up": "playerctl volume 0.05+",
+		"on-scroll-down": "playerctl volume 0.05-",
 		"scroll-step": 5
 	},
 	"temperature": {
