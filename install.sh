@@ -1,4 +1,4 @@
-mkdir -p ~/.config/sway ~/.config/alacritty && ~/.config/waybar
+mkdir -p ~/.config/sway ~/.config/alacritty ~/.config/waybar
 cp ./sway/* ~/.config/sway/
 cp ./waybar/* ~/.config/waybar/
 cp ./alacritty/* ~/.config/alacritty/
