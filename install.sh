@@ -11,4 +11,7 @@ makepkg -si
 echo "removing yay folder"
 rm -r yay
 
-yay -S pacseek
+yay -S pacseek --needed
+
+mkdir ~/wallpaper -p && mv ./wallpapers/* ~/wallpaper/
+echo "try logging in and out"
