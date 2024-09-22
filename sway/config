@@ -1,3 +1,4 @@
+exec dunst &
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -82,13 +83,11 @@ input * {
 }
 
 #here is the switches
-exec dunst &
 exec notify-send "running sway with wayland" & waybar &
 default_border pixel 5
 exec ~/.config/sway/wallpaper.sh &
 exec notify-send "Xwayland sucessfull" &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
 
 #wayland support cause why not?
 xwayland enable
@@ -97,9 +96,11 @@ xwayland enable
 ### Key bindings
 # Basics:
 #
-    # volume up/down (pulsemixer)
+    # volume up/down (pulsemixer) and other toggles
     bindsym $mod+Home exec $volup
     bindsym $mod+End exec $voldown
+    bindsym $mod+Shift+w exec rfkill toggle 1 && notify-send "Wifi toggle"
+    bindsym $mod+Shift+b rfkill toggle 0 && notify-send "bluetooth toggle"
 
     # music player
     bindsym $mod+c exec $plps
@@ -109,8 +110,8 @@ xwayland enable
     bindsym $mod+x exec $replay
 
     # brightness(ctl)
-    bindsym $mod+Equal exec brightnessctl s +1
-    bindsym $mod+Minus exec brightnessctl s 1-
+    bindsym $mod+Equal exec brightnessctl s +1%
+    bindsym $mod+Minus exec brightnessctl s 1%-
 
     # suspend
     bindsym $mod+Shift+s exec systemctl suspend
