@@ -4,6 +4,8 @@ import = [
 
 [window]
 opacity = 0.84
+blur = true
+title = "Nya!lacritty"
 
 [font]
 size = 13
