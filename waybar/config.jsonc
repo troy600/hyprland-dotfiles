@@ -1,14 +1,14 @@
 {
 	"layer": "top",
 	"position": "top",
-	"margin": "0 0",
+	"margin": "0",
 	"mod": "bar",
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
 	"height": 30,
-	"modules-left": ["sway/workspaces", "sway/mode"],
-	"modules-center": ["sway/window"],
+	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
+	"modules-center": ["hyprland/window"],
 	"modules-right": [
 		"tray",
 		//"backlight",
@@ -22,7 +22,7 @@
 		"clock"
 	],
 	"include": [],
-	"sway/window": {
+	"hyprland/window": {
 		"format": "{}"
 	},
 	"custom/power": {
@@ -37,7 +37,7 @@
                 "hibernate": "systemctl hibernate"
                      }
            },
-	"sway/workspaces": {
+	"hyprland/workspaces": {
 		"all-outputs": true,
 		"on-click": "activate",
 		"persistent-workspaces": {
