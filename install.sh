@@ -1,5 +1,5 @@
-mkdir -p ~/.config/sway ~/.config/alacritty ~/.config/waybar
-cp ./sway/* ~/.config/sway/
+mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop
+cp ./hypr/* ~/.config/hypr/
 cp ./waybar/* ~/.config/waybar/
 cp ./alacritty/* ~/.config/alacritty/
 
