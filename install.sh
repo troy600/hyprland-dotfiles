@@ -22,4 +22,6 @@ yay -S pacseek --needed
 
 mkdir ~/wallpaper -p && mv ./wallpapers/* ~/wallpaper/
 cd ~/wallpaper/ && tar -xvf aa.tar
+wal -i ~/wallpaper/Aiabstract.png --saturate 1
+ln -s ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors.css
 echo "try logging in and out"
