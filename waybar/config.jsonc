@@ -69,8 +69,8 @@
 		"min-length": 6
 	},
     "cpu": {
-        "format": "{usage}% {load}?",
-    "interval": "1s"
+        "format": "{usage}%",
+    "interval": "1"
     },
 	"battery": {
 		"states": {
@@ -116,9 +116,9 @@
 	"temperature": {
 		"thermal-zone": 0,
 		"format": " {temperatureC}°C",
-		"critical-threshold": 75,
-		"format-critical": "{temperatureC}°C ",
-        "interval": "9"
+		"critical-threshold": 80,
+		"format-critical": "Dangerous: {temperatureC}°C ",
+        "interval": "0.5"
 	},
 	"network": {
         "interface": "wlp3s0",
