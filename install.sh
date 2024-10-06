@@ -2,10 +2,8 @@ mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop
 cp ./hypr/* ~/.config/hypr/
 cp ./waybar/* ~/.config/waybar/
 cp ./alacritty/* ~/.config/alacritty/
+cp ./htop/* ~/.config/htop
 
-
-
-sudo pacman -Syu --needed pulseaudio sway waybar sddm base-devel git alacritty python-pywal
 
 if [ -f /usr/bin/yay ]; then
     echo "installing..."
@@ -18,7 +16,7 @@ fi
 echo "removing yay folder"
 rm -rfv yay
 
-yay -S pacseek --needed
+yay -Syu --needed pulseaudio sway hyprland sddm base-devel git alacritty python-pywal rofi-wayland pacseek NetworkManager
 
 mkdir ~/wallpaper -p && mv ./wallpapers/* ~/wallpaper/
 cd ~/wallpaper/ && tar -xvf aa.tar
