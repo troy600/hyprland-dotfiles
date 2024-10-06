@@ -3,7 +3,7 @@ cp ./hypr/* ~/.config/hypr/
 cp ./waybar/* ~/.config/waybar/
 cp ./alacritty/* ~/.config/alacritty/
 cp ./htop/* ~/.config/htop
-
+#sudo ./rofi-themes/* /usr/share/rofi/themes/
 
 if [ -f /usr/bin/yay ]; then
     echo "installing..."
@@ -16,7 +16,9 @@ fi
 echo "removing yay folder"
 rm -rfv yay
 
-yay -Syu --needed pulseaudio sway hyprland sddm base-devel git alacritty python-pywal rofi-wayland pacseek NetworkManager
+yay -Syu --needed pulseaudio sway hyprland sddm base-devel git alacritty rofi-wayland pacseek NetworkManager python-pywal16
+
+sudo cp ./rofi-themes/* /usr/share/rofi/themes/
 
 mkdir ~/wallpaper -p && mv ./wallpapers/* ~/wallpaper/
 cd ~/wallpaper/ && tar -xvf aa.tar
