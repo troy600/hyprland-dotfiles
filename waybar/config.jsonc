@@ -118,7 +118,7 @@
 		"format": " {temperatureC}°C",
 		"critical-threshold": 80,
 		"format-critical": "Dangerous: {temperatureC}°C ",
-        "interval": "0.5"
+        "interval": "1"
 	},
 	"network": {
         "interface": "wlp3s0",
