@@ -3,7 +3,7 @@ import = [
 ]
 
 [window]
-opacity = 0.84
+opacity = 0.8
 blur = false
 title = "Nya!lacritty"
 
