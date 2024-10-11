@@ -2,7 +2,7 @@
 
 * {
     font-family: "JetBrainsMono Nerd Font, monospace";
-    font-weight: bold;
+   /* font-weight: bold;*/
     font-size: 14px;
     min-height: 0;
 }
@@ -21,22 +21,22 @@ tooltip {
 }
 
 #workspaces button {
-    color: @color8;
+    color: @color4;
     padding-left: 7px;
-
+    opacity: 0.5;
 }
 
 #workspaces {
-    padding: 5px;
     border: 4px solid  @color1;
-    margin: 2px;
-    border-radius: 25;
-/*    background: @color1;*/
 }
 
 #workspaces button.active {;
     background: @color2;
     border-radius: 25%;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    min-width: 15px;
+    border-radius: 15px;
 }
 
 #workspaces button.focused {
@@ -52,6 +52,8 @@ tooltip {
 #workspaces button:hover {
     background: @background;
     color: @color5;
+    transition: all 0.5s ease-in-out;
+    min-width: 17px;
 }
 
 #cpu,
@@ -98,12 +100,14 @@ tooltip {
     border-radius: 25;
 }
 
+
 #window {
     margin-left: 17px;
     margin-right: 17px;
     color: @color5;
     border-radius: 25;
-    border: 4px solid @color1;
+    border: 4px solid @color2;
+    transition: opacity 0.5s ease-in-out;
 }
 
 #clock {
@@ -117,6 +121,7 @@ tooltip {
     color: @color13;
     border: 4px solid @color1;
     border-radius: 25;
+    transition: all 0.5s ease-in-out;
 }
 
 #bluetooth {
