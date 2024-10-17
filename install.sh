@@ -39,7 +39,7 @@ esac
 
 
 
-if [ -f /usr/bin/yay ]; then
+if [ -f "/usr/bin/yay" ]; then
     echo "installing..."
 else
     git clone https://aur.archlinux.org/yay
