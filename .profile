@@ -1,7 +1,9 @@
 this=1
+cat ~/.cache/wal/sequences
 
 
 if [[ $(tty) == "/dev/tty1" ]]; then
+    figlet "My awesome login manager"
     echo "tty1"
     echo "how do you want to start your day :)?"
     echo "(1) tty mode "
@@ -24,4 +26,5 @@ if [[ $(tty) == "/dev/tty1" ]]; then
     esac
 else
     echo "not on tty 1"
+    echo "continuing on a regular tty"
 fi
