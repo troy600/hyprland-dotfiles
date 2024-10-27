@@ -64,10 +64,10 @@ echo "try logging in and out"
 
 
 mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop ~/.config/sway
-cp ./hypr/* ~/.config/hypr/
-cp ./waybar/* ~/.config/waybar/
-cp ./alacritty/* ~/.config/alacritty/
-cp ./htop/* ~/.config/htop
+cp -f ./hypr/* ~/.config/hypr/
+cp -f ./waybar/* ~/.config/waybar/
+cp -f ./alacritty/* ~/.config/alacritty/
+cp -f ./htop/* ~/.config/htop
 sudo ./rofi-themes/* /usr/share/rofi/themes/
 
 cd ~/wallpaper/ && bash install.sh
