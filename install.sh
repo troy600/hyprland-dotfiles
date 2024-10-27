@@ -67,7 +67,8 @@ mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop ~/.c
 cp -f ./hypr/* ~/.config/hypr/
 cp -f ./waybar/* ~/.config/waybar/
 cp -f ./alacritty/* ~/.config/alacritty/
-cp -f ./htop/* ~/.config/htop
+cp -f ./htop/* ~/.config/htop/
+cp -f ./sway/* ~/.config/sway/
 sudo ./rofi-themes/* /usr/share/rofi/themes/
 
 cd ~/wallpaper/ && bash install.sh
