@@ -87,7 +87,7 @@ input * {
 exec dunst &
 exec notify-send "running sway with wayland" & waybar -c ~/.config/waybar/config-sway.jsonc &
 default_border pixel 5
-exec ~/.config/sway/wallpaper.sh &
+exec ~/.config/sway/autorun.sh &
 exec notify-send "Xwayland sucessfull" &
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
