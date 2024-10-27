@@ -1,12 +1,12 @@
 {
 	"layer": "top",
 	"position": "top",
-	"margin": "0",
+//	"margin": "0",
 	"mod": "bar",
-	"exclusive": true,
+//	"exclusive": true,
 	"passthrough": false,
-	"gtk-layer-shell": true,
-	"height": 30,
+//	"gtk-layer-shell": true,
+	"height": 10,
 	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
 	"modules-center": ["hyprland/window"],
 	"modules-right": [
@@ -66,7 +66,7 @@
 		"format-icons": ["󰃞", "󰃟", "󰃠"],
 		"on-scroll-up": "brightnessctl set 10%+",
 		"on-scroll-down": "brightnessctl set 10%-",
-		"min-length": 6
+		"min-length": 4
 	},
     "cpu": {
         "format": "{usage}%",

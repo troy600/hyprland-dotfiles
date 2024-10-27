@@ -5,8 +5,8 @@
 	"mod": "bar",
 	"exclusive": true,
 	"passthrough": false,
-	"gtk-layer-shell": true,
-	"height": 30,
+//	"gtk-layer-shell": true,
+//	"height": 20,
 	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
 	"modules-center": ["hyprland/window"],
 	"modules-right": [
