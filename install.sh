@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+sudo pacman -S zenity
+
 browser=""
 wms=
 
@@ -50,20 +52,22 @@ fi
 echo "removing yay folder"
 rm -rfv yay
 
-yay -Syu --needed pulseaudio waypaper sway hyprland sddm base-devel git alacritty rofi-wayland pacseek NetworkManager python-pywal16 $browser
+yay -Syu --needed otf-font-awesome awesome-terminal-fonts noto-fonts noto-fonts-cjk pulseaudio waypaper $wms sddm base-devel git alacritty rofi-wayland pacseek python-pywal16 $browser
 
 sudo cp ./rofi-themes/* /usr/share/rofi/themes/
 
 mkdir ~/wallpaper -p && mv ./wallpapers/* ~/wallpaper/
-cd ~/wallpaper/ && bash install.sh
+#cd ~/wallpaper/ && bash install.sh
 wal -i ~/wallpaper/Aiabstract.png --saturate 1
 ln -s ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors.css
 echo "try logging in and out"
 
 
-mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop
+mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop ~/.config/sway
 cp ./hypr/* ~/.config/hypr/
 cp ./waybar/* ~/.config/waybar/
 cp ./alacritty/* ~/.config/alacritty/
 cp ./htop/* ~/.config/htop
 sudo ./rofi-themes/* /usr/share/rofi/themes/
+
+cd ~/wallpaper/ && bash install.sh
