@@ -7,7 +7,7 @@
 	"passthrough": false,
 	"gtk-layer-shell": false,
 	"height": 20,
-	"modules-left": ["tray", "hyprland/workspaces", "hyprland/mode"],
+	"modules-left": ["custom/power", "hyprland/workspaces", "tray", "hyprland/mode"],
 	"modules-center": ["hyprland/window"],
 	"modules-right": [
 		//"backlight",
@@ -25,22 +25,14 @@
 		"format": "{}"
 	},
 	"custom/power": {
-            "format" : "⏻ ",
-            "tooltip": false,
-            "menu": "on-click",
-            "menu-file": "~/.config/waybar/power_menu.xml",
-            "menu-actions": {
-                "shutdown": "shutdown",
-                "reboot": "reboot",
-                "suspend": "systemctl suspend",
-                "hibernate": "systemctl hibernate"
-                     }
+            "format" : "  ⏻  ",
+            "on-click": "~/.config/waybar/login.sh"
            },
 	"hyprland/workspaces": {
 		"all-outputs": true,
 		"on-click": "activate",
 		"persistent-workspaces": {
-            "*": 10
+            "*": 7
 		}
 	},
 	"tray": {
