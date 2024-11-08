@@ -252,9 +252,16 @@ bindsym $mod+Ctrl+Right resize grow width 10px
 
 #bindsym $mod+r mode "resize"
 
+
+# Decors 
+
+gaps outer 7
+
+
+
 #theme cursor
 seat * {
-    xcursor_theme Bibata-Modern-Classic 24
+    xcursor_theme Bibata-Pink-Ice 24
 }
 #
 # Status Bar:
