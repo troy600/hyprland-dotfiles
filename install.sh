@@ -1,6 +1,15 @@
 #!/usr/bin/bash
 
-sudo pacman -S zenity
+sudo pacman -Sy zenity figlet --needed
+
+
+if [[ -f "./install.sh" && -f "./hypr/hyprland.conf" ]]; then
+    echo "same dir lets assume"
+else
+    echo "not in the same folder"
+    echo "stupid user"
+    exit
+fi
 
 browser=""
 wms=
@@ -52,7 +61,16 @@ fi
 echo "removing yay folder"
 rm -rfv yay
 
-yay -Syu --needed otf-font-awesome awesome-terminal-fonts noto-fonts noto-fonts-cjk pulseaudio waypaper $wms sddm base-devel git alacritty rofi-wayland pacseek python-pywal16 $browser
+yay -Syu --needed otf-font-awesome awesome-terminal-fonts noto-fonts noto-fonts-cjk pulseaudio waypaper $wms sddm base-devel git alacritty rofi-wayland pacseek python-pywal16 $browser nodejs vim waybar 
+
+echo "want to install coc-nvim? (y/n)"
+read coc_wants
+
+case "$coc_wants" in
+    y|Y)
+        bash ./coc-setup.sh
+        ;;
+esac
 
 sudo cp ./rofi-themes/* /usr/share/rofi/themes/
 
@@ -60,7 +78,6 @@ mkdir ~/wallpaper -p && mv ./wallpapers/* ~/wallpaper/
 #cd ~/wallpaper/ && bash install.sh
 wal -i ~/wallpaper/Aiabstract.png --saturate 1
 ln -s ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors.css
-echo "try logging in and out"
 
 
 mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop ~/.config/sway
@@ -69,6 +86,10 @@ cp -f ./waybar/* ~/.config/waybar/
 cp -f ./alacritty/* ~/.config/alacritty/
 cp -f ./htop/* ~/.config/htop/
 cp -f ./sway/* ~/.config/sway/
+cp -f ./login.sh ~/.config/sway/login.sh
+cp -f ./login.sh ~/.config/hyprland/
 sudo ./rofi-themes/* /usr/share/rofi/themes/
 
 cd ~/wallpaper/ && bash install.sh
+
+figlet "opertion complete!! try loggin in and out"
