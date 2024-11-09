@@ -1,1 +1,1 @@
-tar -xvf aa.tar
+tar --xvf wallpapers.tar
