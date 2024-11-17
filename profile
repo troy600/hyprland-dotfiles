@@ -4,6 +4,6 @@
 if [ $(tty) == /dev/tty1 ]; then
     exec Hyprland
 else
-    echo "hyp[rland is running \n"
+    echo "hyprland is running \n"
 fi
 
