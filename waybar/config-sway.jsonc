@@ -7,10 +7,9 @@
 	"passthrough": false,
 	"gtk-layer-shell": true,
 	"height": 30,
-	"modules-left": ["sway/workspaces", "sway/mode"],
-	"modules-center": ["sway/window"],
+	"modules-left": ["custom/power", "sway/window", "sway/mode", "tray"],
+	"modules-center": ["sway/workspaces"],
 	"modules-right": [
-		"tray",
 		//"backlight",
 		"temperature",
 		"battery",
@@ -26,16 +25,8 @@
 		"format": "{}"
 	},
 	"custom/power": {
-            "format" : "⏻ ",
-            "tooltip": false,
-            "menu": "on-click",
-            "menu-file": "~/.config/waybar/power_menu.xml",
-            "menu-actions": {
-                "shutdown": "shutdown",
-                "reboot": "reboot",
-                "suspend": "systemctl suspend",
-                "hibernate": "systemctl hibernate"
-                     }
+            "format" : "   ⏻   ",
+            "on-click": "~/.config/waybar/login.sh"
            },
 	"sway/workspaces": {
 		"all-outputs": true,

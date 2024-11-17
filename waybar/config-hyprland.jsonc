@@ -7,8 +7,8 @@
 	"passthrough": false,
 	"gtk-layer-shell": false,
 	"height": 20,
-	"modules-left": ["custom/power", "hyprland/workspaces", "tray", "hyprland/mode"],
-	"modules-center": ["hyprland/window"],
+	"modules-left": ["custom/power", "hyprland/window", "tray"],
+	"modules-center": ["hyprland/workspaces"],
 	"modules-right": [
 		//"backlight",
 		"temperature",
@@ -21,18 +21,16 @@
 		"clock"
 	],
 	"include": [],
-	"hyprland/window": {
-		"format": "{}"
-	},
 	"custom/power": {
             "format" : "  ⏻  ",
+			"tooltip-format":"what?",
             "on-click": "~/.config/waybar/login.sh"
            },
 	"hyprland/workspaces": {
 		"all-outputs": true,
 		"on-click": "activate",
 		"persistent-workspaces": {
-            "*": 7
+            "*": 5
 		}
 	},
 	"tray": {
@@ -109,7 +107,7 @@
 		"format": " {temperatureC}°C",
 		"critical-threshold": 80,
 		"format-critical": "Dangerous: {temperatureC}°C ",
-        "interval": "1"
+        "interval": 5
 	},
 	"network": {
         "interface": "wlp3s0",
@@ -129,6 +127,13 @@
 		"tooltip-format-connected": " {device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}",
 		"on-click": "bluetooth toggle"
+	},
+	"hyprland/window": {
+		"format": "{}",
+		"rewrite": {
+            "(.*) - Mozilla Firefox": "🌎 $1",
+            "(.*) - zsh": "> [$1]"
+		}
 	}
 }
 
