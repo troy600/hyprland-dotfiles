@@ -72,15 +72,13 @@ case "$coc_wants" in
         ;;
 esac
 
-sudo cp ./rofi-themes/* /usr/share/rofi/themes/
-
 mkdir ~/wallpaper -p && mv ./wallpapers/* ~/wallpaper/
 #cd ~/wallpaper/ && bash install.sh
 wal -i ~/wallpaper/Aiabstract.png --saturate 1
 ln -s ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors.css
 
 
-mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop ~/.config/sway
+mkdir -p ~/.config/hypr ~/.config/alacritty ~/.config/waybar ~/.config/htop ~/.config/sway ~/.local/share/rofi
 cp -f ./hypr/* ~/.config/hypr/
 cp -f ./waybar/* ~/.config/waybar/
 cp -f ./alacritty/* ~/.config/alacritty/
@@ -88,7 +86,7 @@ cp -f ./htop/* ~/.config/htop/
 cp -f ./sway/* ~/.config/sway/
 cp -f ./login.sh ~/.config/sway/login.sh
 cp -f ./login.sh ~/.config/hyprland/
-sudo ./rofi-themes/* /usr/share/rofi/themes/
+cp -frv ./rofi-themes/* ~/.local/share/rofi
 
 cd ~/wallpaper/ && bash install.sh
 
