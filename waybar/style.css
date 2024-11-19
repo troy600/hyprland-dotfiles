@@ -8,12 +8,22 @@
     min-height: 0;
 }
 
+*:hover {
+    color: blueviolet;
+}
+
+h1 {
+    border: 5px double blue;
+}
+
+
 #custom-power {
     background: @background;
     border: 4px solid  @color2;
     margin-left: 10px;
     padding-right: 0px;
     border-radius: 25;
+    color: @color1;
 }
 
 window#waybar {
@@ -23,13 +33,25 @@ window#waybar {
     color: #cdd6f4;
 }
 
+
+window#waybar.empty button.active {
+    background-color: blue;
+}
+
+
+window#waybar.empty #window {
+    opacity: 0;
+}
+
+
+
 tooltip {
     background: #010409;
     border-radius: 10px;
 }
 
 #workspaces button {
-    color: @color5;
+    color: @color7;
     padding-left: 7px;
     opacity: 0.9;
 }
@@ -45,7 +67,6 @@ h1 {
 
 #workspaces button.active {
     background: @color2;
-    border-radius: 25%;
     transition: all 0.3s ease-in-out;
     opacity: 1;
     min-width: 15px;
@@ -53,7 +74,7 @@ h1 {
 }
 
 #workspaces button.focused {
-    color: @color3;
+    color: @color1;
     background: @background;
 }
 
@@ -63,8 +84,8 @@ h1 {
 }
 
 #workspaces button:hover {
-    background: @background;
-    color: @color5;
+    background: @color5;
+    border-radius: 15px;
     transition: all 0.5s ease-in-out;
     min-width: 17px;
 }
@@ -85,29 +106,30 @@ h1 {
 }
 
 #cpu {
-    color: @color13;
+    color: @color3;
     border: 4px solid @color2;
-    border-radius: 25;
+    border-radius: 25px;
     background: @background;
 }
 
 #temperature {
-    color : @color13;
+    color : @color8;
     border: 4px solid @color2;
-    border-radius: 25;
+    border-radius: 25px;
     background: @background;
 }
 
 #temperature.critical {
     color: @color15;
     border: 4px solid @color2;
-    border-radius: 25;
+    border-radius: 25px;
     background: @background;
 }
 
 #tray {
+    border: 4px dotted @color2;
     margin-right: 10px;
-    border-radius: 25;
+    border-radius: 25px;
 
 }
 
@@ -115,16 +137,16 @@ h1 {
     margin-left: 10px;
     padding-right: 0px;
     padding-left: 5px;
-    border-radius: 25;
+    border-radius: 25px;
 
 }
 
 
 #window {
-    margin-left: 17px;
+    margin-left: 5px;
     margin-right: 17px;
-    color: @color5;
-    border-radius: 25;
+    color: @color3;
+    border-radius: 25px;
     border: 4px solid @color2;
     transition: opacity 0.5s ease-in-out;
     background: @background;
@@ -132,38 +154,40 @@ h1 {
 
 #clock {
     border: 4px solid @color2;
-    color: @color6;
+    color: @color1;
     margin-right: 14px;
-    border-radius: 25;
+    border-radius: 25px;
 }
 
 #network {
-    color: @color13;
+    color: @color8;
     border: 4px solid @color2;
-    border-radius: 25;
+    border-radius: 25px;
     transition: all 0.5s ease-in-out;
 }
 
 #bluetooth {
     color: @color8;
     border: 4px solid @color2;
-    border-radius: 25;
+    border-radius: 25px;
 } 
 
 #pulseaudio {
-    color: @color9;
+    color: @color4;
     border: 4px solid @color2;
-    border-radius: 25;
+    border-radius: 25px;
+
 }
 
 #pulseaudio.microphone {
     color: @color10;
     border: 4px solid @color2;
-    border-radius: 25;
+    border-radius: 25px;
 }
 
 #battery {
-    color: @color11;
+    color: @color6;
     border: 4px solid @color2;
-    border-radius: 25;
+    border-radius: 25px;
 }
+
