@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-login=$(echo "Exit|Shutdown|Restart|Suspend|Terminal" | rofi -dmenu -no-X -sep "|"  -p "Want to shudown? or Restart?" -window-title "Power Menu")
+login=$(echo "Exit|Shutdown|Restart|Suspend|Terminal|logout" | rofi -dmenu -no-X -sep "|"  -p "Want to shudown? or Restart?" -window-title "Power Menu")
 
 dmenu() {
     echo "$1" | rofi -p "Are you sure about that?" -dmenu -no-X -window-title "login" -sep "|"
@@ -54,5 +54,8 @@ case "$login" in
         ;;
     "Suspend")
         systemctl suspend
+        ;;
+    "logout")
+        pkiil sway && pkill hyprand
         ;;
 esac
