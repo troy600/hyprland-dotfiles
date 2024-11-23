@@ -1,1 +1,1 @@
-tar --xvf wallpapers.tar
+tar -xvf wallpapers.tar.zst
