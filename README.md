@@ -14,7 +14,10 @@ easy as that
 
 
 
-<h1 style="color: red">keybinds</h1>
-'''
+<h1 style="color: red">list of sway keybinds</h1>
+```sh
+Mod + 1 -- 0 -> Switch window
+Mod + +/- -> increase/decrease brightness
+Mod + "Return or Enter" -> open rofi app menu
 
-'''
+```
