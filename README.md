@@ -15,6 +15,7 @@ easy as that
 
 
 <h1 style="color: red">list of sway keybinds</h1>
+<break>
 ```sh
 Mod + 1 -- 0 -> Switch window
 Mod + +/- -> increase/decrease brightness
