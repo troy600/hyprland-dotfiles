@@ -14,7 +14,7 @@ easy as that
 
 
 
-<h1>keybinds</h1>
+<h1 style="color: red">keybinds</h1>
 '''
 
 '''
