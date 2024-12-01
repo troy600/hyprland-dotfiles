@@ -10,10 +10,10 @@ Run:
 bash install.sh
 ```
 easy as that
-
-
-
-
+<p>
+</p>
+<p>
+</p>
 <h1 style="color: red">list of sway keybinds</h1>
 <break>
 
@@ -21,5 +21,9 @@ easy as that
 Mod + 1 -- 0 -> Switch window
 Mod + +/- -> increase/decrease brightness
 Mod + "Return or Enter" -> open rofi app menu
+Mod + "Q" -> quit/kill program that highlighted.
+Mod + "c" -> pause media
+Mod + "b" -> toggle next media
+
 ```
 
