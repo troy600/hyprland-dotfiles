@@ -19,5 +19,4 @@ easy as that
 Mod + 1 -- 0 -> Switch window
 Mod + +/- -> increase/decrease brightness
 Mod + "Return or Enter" -> open rofi app menu
-
 ```
