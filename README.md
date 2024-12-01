@@ -10,3 +10,11 @@ Run:
 bash install.sh
 ```
 easy as that
+
+
+
+
+<h1>keybinds</h1>
+'''
+
+'''
