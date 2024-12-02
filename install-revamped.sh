@@ -7,10 +7,12 @@ essentials() {
    misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono otf-fonts-awesome "
 }
 
+#Wmhyprland set variable
 WmHyprland() {
     wm=hyprland
 }
 
+#install yet another yogurt
 yayInstall() {
    bash ./scripts/yay.sh
 }
@@ -24,6 +26,7 @@ preffered_kernel() {
    fi
 }
 
+#sway
 WmSway() {
    wm=sway
 }
