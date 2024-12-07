@@ -4,25 +4,38 @@ noneed="--noconfirm --needed"
 
 essentials() {
    system="systemd networkmanager pulseaudio pulsemixer python vim nano grub efibootmgr gparted gtk4 gtk3 "
-   misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono otf-fonts-awesome "
+   misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-fonts-awesome "
 }
+
+
+########################3
+
+
+
+
+
+
+########################
+
 
 #Wmhyprland set variable
 Pwm() {
    read -p "What is your prefered wm?" wms
    case $wms in
       1)
-         wm=sway
+         wm="sway"
          ;;
       2)
-         wm=hyprland
+         wm="hyprland"
          ;;
    esac
 }
 
 #install yet another yogurt
 yayInstall() {
-   bash ./scripts/yay.sh
+   if [[ ! -f /usr/bin/yay ]]; then
+      bash ./scripts/yay.sh
+   fi
 }
 
 preffered_kernel() {
@@ -55,13 +68,13 @@ browser() {
    read -p "What brwoser you want to use? >> " sel
    case "$sel" in
       1)
-         browser="firefox"
+         browser=" firefox"
          ;;
       2)
-         browser="edge"
+         browser=" microsoft-edge-stable-bin"
          ;;
       3)
-         browser="chromium"
+         browser=" chromium"
          ;;
       4)
          echo "what an idiot"
@@ -71,12 +84,18 @@ browser() {
 }
 
 main() {
+   #yay installr
+   yayInstall
+
    #Pick wm
    Pwm
 
+   #browser
+   browser
+
    #call essentials
    essentials
-   sudo pacman -Syu $noneed $system $misc $wm
+   yay -Syu $noneed $system $misc $wm $browser
 }
 
 #call d main func
