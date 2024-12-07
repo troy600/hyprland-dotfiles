@@ -10,7 +10,13 @@ essentials() {
 
 ########################3
 
-
+CopyFiles() {
+   mkdir -p ~/.local/share/icons ~/.config/sway ~/.config/alacritty ~/.config/waybar ~/.local/share/rofi/themes
+   cp ./Bibata-Pink-Ice ~/.local/share/icons/
+   cp -rvf ./alacritty/* ~/.config/waybar/
+   cp -rvf ./waybar/* ~/.config/waybar/
+   cp -rvf ./rofi-themes/* ~/.local/share/rofi/themes/
+}
 
 
 
