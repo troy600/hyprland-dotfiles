@@ -3,23 +3,24 @@
 noneed="--noconfirm --needed"
 
 essentials() {
-   system="systemd networkmanager pulseaudio pulsemixer python vim nano grub efibootmgr gparted gtk4 gtk3 "
-   misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-fonts-awesome "
+   system="alacritty systemd networkmanager pulseaudio pulsemixer python vim nano grub efibootmgr gparted gtk4 gtk3 "
+   misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-fonts-awesome waypaper htop lzop"
 }
 
 
 ########################3
 
 CopyFiles() {
-   mkdir -p ~/.local/share/icons ~/.config/sway ~/.config/alacritty ~/.config/waybar ~/.local/share/rofi/themes
+   mkdir -p ~/.local/share/icons ~/.config/sway ~/.config/alacritty ~/.config/waybar ~/.local/share/rofi/themes ~/.config/gtk ~/.config/gtk-2.0 ~/.config/gtk-3.0 ~/.config/gtk-4.0
    cp ./Bibata-Pink-Ice ~/.local/share/icons/
    cp -rvf ./alacritty/* ~/.config/waybar/
    cp -rvf ./waybar/* ~/.config/waybar/
    cp -rvf ./rofi-themes/* ~/.local/share/rofi/themes/
+   cp -rvf ./gtk/* ~/.config/gtk
+   cp -rvf ./gtk-2.0/* ~/.config/gtk-2.0
+   cp -rvf ./gtk-3.0/*~/.config/gtk-3.0
+   cp -rvf ./gtk-4.0/* ~/.config/gtk-4.0
 }
-
-
-
 
 ########################
 
@@ -102,6 +103,7 @@ main() {
    #call essentials
    essentials
    yay -Syu $noneed $system $misc $wm $browser
+   CopyFiles
 }
 
 #call d main func
