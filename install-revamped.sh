@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-noneed=--noconfirm --needed
+noneed="--noconfirm --needed"
 
 essentials() {
    system="systemd networkmanager pulseaudio pulsemixer python vim nano grub efibootmgr gparted gtk4 gtk3 "
@@ -8,8 +8,16 @@ essentials() {
 }
 
 #Wmhyprland set variable
-WmHyprland() {
-    wm=hyprland
+Pwm() {
+   read -p "What is your prefered wm?" wms
+   case $wms in
+      1)
+         wm=sway
+         ;;
+      2)
+         wm=hyprland
+         ;;
+   esac
 }
 
 #install yet another yogurt
@@ -32,7 +40,7 @@ WmSway() {
 }
 
 rofiwayland () {
-   hello
+   packages=rofi-wayland
 }
 
 pacman_install() {
@@ -60,12 +68,16 @@ browser() {
          ;;
    esac
    unset sel
-
-main() {
-   WmHyprland
 }
 
+main() {
+   #Pick wm
+   Pwm
 
-preffered_kernel "linux-zen"
-essentials
-pacman_install $kernel  $misc
+   #call essentials
+   essentials
+   sudo pacman -Syu $noneed $system $misc $wm
+}
+
+#call d main func
+main
