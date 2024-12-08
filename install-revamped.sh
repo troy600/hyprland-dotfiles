@@ -7,6 +7,20 @@ essentials() {
    misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-fonts-awesome waypaper htop lzop"
 }
 
+Loginmanager() {
+   echo "tty (1)"
+   echo "sddm (2)"
+   echo "what is your prefered login manager?"
+   read -p ">> " logins
+   case "$logins" in
+      2)
+         loginman="sddm"
+         ;;
+      1)
+         loginman="tty"
+         ;;
+   esac
+}
 
 ########################3
 
@@ -85,6 +99,7 @@ browser() {
          ;;
       4)
          echo "what an idiot"
+         browser="firefox"
          ;;
    esac
    unset sel
@@ -96,6 +111,12 @@ main() {
 
    #Pick wm
    Pwm
+
+   Loginmanager
+
+   if [[ $loginman === "sddm" ]]; then
+      sudo pacman -S sddm
+   fi
 
    #browser
    browser
