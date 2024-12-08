@@ -7,6 +7,11 @@ essentials() {
    misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-fonts-awesome waypaper htop lzop"
 }
 
+pfshell() {
+
+}
+
+
 Loginmanager() {
    echo "tty (1)"
    echo "sddm (2)"
