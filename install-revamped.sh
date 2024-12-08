@@ -18,6 +18,8 @@ Loginmanager() {
          ;;
       1)
          loginman="tty"
+         cp ./proifile ~/.profile
+         sudo cp -rvf ./zprofile /erc/zsh/zprofile
          ;;
    esac
 }
