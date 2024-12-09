@@ -102,7 +102,7 @@ browser() {
          browser=" microsoft-edge-stable-bin"
          ;;
       3)
-         browser=" chromium"
+         browser=" ungoogled-chromium "
          ;;
       4)
          echo "what an idiot"
