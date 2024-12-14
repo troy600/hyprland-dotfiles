@@ -7,7 +7,7 @@ if [[ $(tty) == "/dev/tty1" ]]; then
     echo "(1) tty mode "
     echo "(2) hyprland mode"
     echo "(3) sway mode"
-    read this
+    read -p ">>" this
 
     case $this in
         1)
