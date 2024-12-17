@@ -22,11 +22,11 @@ main() {
 	    notify-send "you didn't pick any wallpaper"
 	    return 1
     else
-	    waypaper --wallpaper $path  &
+	    waypaper --wallpaper "$path"  &
 	    wal -i "$HOME/wallpaper/$chosen" --saturate 1.0 -n
 	    pkill waybar
 	    waybar -c ~/.config/waybar/config-sway.jsonc &
-	    cp $HOME/wallpaper/$chosen $wallpaper
+	    cp "$HOME/wallpaper/$chosen" $wallpaper
 fi
 }
 
