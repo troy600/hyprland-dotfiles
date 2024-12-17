@@ -4,7 +4,7 @@ noneed="--noconfirm --needed"
 
 essentials() {
    system="alacritty systemd networkmanager pulseaudio pulsemixer python vim nano grub efibootmgr gparted gtk4 gtk3 "
-   misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-fonts-awesome waypaper htop lzop"
+   misc="python-pywal16 waybar noto-fonts-extra noto-fonts-cjk ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-fonts-awesome waypaper htop lzop uwsm"
 }
 
 pfshell() {
