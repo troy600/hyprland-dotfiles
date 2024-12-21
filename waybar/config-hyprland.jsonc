@@ -7,7 +7,7 @@
 	"passthrough": false,
 	"gtk-layer-shell": false,
 	"height": 20,
-	"modules-left": ["custom/power", "hyprland/window", "tray"],
+	"modules-left": ["custom/power", "tray", "hyprland/window"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": [
 		//"backlight",
@@ -113,7 +113,7 @@
         "interface": "wlp3s0",
 		"format-wifi": " {signalStrength}%",
 		"format-ethernet": "{ipaddr}/{cidr}",
-		"tooltip-format": "{essid} - {ifname} via {gwaddr}",
+		"tooltip-format": "{essid} - via {ifname} {gwaddr}",
 		"format-linked": "{ifname} (No IP)",
 		"format-disconnected": "Disconnected ⚠",
 		"format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
