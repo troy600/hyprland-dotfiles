@@ -7,7 +7,7 @@
 	"passthrough": false,
 	"gtk-layer-shell": true,
 	"height": 30,
-	"modules-left": ["custom/power", "tray", "sway/window", "sway/mode"],
+	"modules-left": ["custom/power", "wlr/taskbar", "tray", "sway/window", "sway/mode"],
 	"modules-center": ["sway/workspaces"],
 	"modules-right": [
 		//"backlight",
@@ -23,6 +23,12 @@
 	"include": [],
 	"hyprland/window": {
 		"format": "{}"
+	},
+	"wlr/taskbar" :{
+		"format": "{icon}",
+		"on-click": "activate",
+		"icon-size": 15,
+		"rewrite": {"Firefox Web Browser": "Firefox"}
 	},
 	"custom/power": {
             "format" : "   ⏻   ",
@@ -117,7 +123,7 @@
         "interval": "1"
 	},
 	"network": {
-        "interface": "wlp3s0",
+        "interface": "wlan0",
 		"format-wifi": " {signalStrength}%",
 		"format-ethernet": "{ipaddr}/{cidr}",
 		"tooltip-format": "{essid} - {ifname} via {gwaddr}",
