@@ -1,4 +1,4 @@
-exec dunst &
+exec mako &
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -19,7 +19,7 @@ set $voldown pulsemixer --change-volume -2 &
 set $mod Mod4
 #playerctl
 set $minfo playerctl metadata
-
+set $QT_QPA_PLATFORMTHEME qt5ct
 set $next playerctl next
 set $plps playerctl play-pause
 set $previous playerctl previous
@@ -59,10 +59,10 @@ client.focused $color1 $color2 $color3 $color4 $color5
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+ exec swayidle -w \
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -84,7 +84,6 @@ input * {
 }
 
 #here is the switches
-exec dunst &
 exec notify-send "running sway with wayland" & waybar -c ~/.config/waybar/config-sway.jsonc &
 default_border pixel 5
 exec ~/.config/sway/autorun.sh &
