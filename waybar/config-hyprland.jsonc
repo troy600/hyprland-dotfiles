@@ -7,7 +7,7 @@
 	"passthrough": false,
 	"gtk-layer-shell": false,
 	"height": 20,
-	"modules-left": ["custom/power", "tray", "hyprland/window"],
+	"modules-left": ["custom/power", "tray", "wlr/taskbar", "hyprland/window"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": [
 		//"backlight",
@@ -37,6 +37,12 @@
 		"icon-size": 0.1,
 		"spacing": 5
 	},
+     "wlr/taskbar" :{
+         "format": "{icon}",
+         "on-click": "activate",
+         "icon-size": 15,
+         "rewrite": {"Firefox Web Browser": "Firefox"}
+     },
 	"clock": {
 		"format": "{:%H:%M}",
 		"tooltip-format": "{calendar}",

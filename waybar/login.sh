@@ -56,6 +56,9 @@ case "$login" in
         systemctl suspend
         ;;
     "logout")
-        pkiil sway && pkill hyprand
+        pkill waybar &
+        pkill hyprland &
+        pkill Hyprland &
+        pkill sway &
         ;;
 esac

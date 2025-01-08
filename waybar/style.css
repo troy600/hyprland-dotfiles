@@ -4,7 +4,7 @@
     font-family: "JetBrainsMono Nerd Font, monospace";  
 /*    font-family: "FiraCode Nerd Font, monospace"; */
     font-weight: bold;
-    font-size: 13px;
+    font-size: 10px;
     min-height: 0;
 }
 
@@ -129,6 +129,21 @@ h1 {
 #tray {
     border: 4px dotted @color2;
     margin-right: 10px;
+    border-radius: 25px;
+
+}
+
+#taskbar {
+    background: @background;
+    border: 2px solid @color2;
+    font-size: 1px;
+    border-radius: 25px;
+}
+
+#taskbar button.active {
+    background: @color2;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
     border-radius: 25px;
 
 }
