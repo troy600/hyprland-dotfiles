@@ -19,11 +19,13 @@ easy as that
 
 ```bash
 Mod + 1 -- 0 -> Switch window
-Mod + +/- -> increase/decrease brightness
 Mod + "Return or Enter" -> open rofi app menu
 Mod + "Q" -> quit/kill program that highlighted.
 Mod + "c" -> pause media
 Mod + "b" -> toggle next media
-
+Mod + "Insert" -> "brightness +"
+Mod + "Delete" -> "brightness -"
+Mod + "Home" -> "volume +"
+Mod + "End" -> "volume -"
 ```
 
