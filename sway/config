@@ -93,6 +93,7 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #wayland support cause why not?
 xwayland enable
 
+#for_window [app_id=".*"] floating enable
 
 ### Key bindings
 # Basics:
@@ -100,6 +101,8 @@ xwayland enable
     # volume up/down (pulsemixer) and other toggles
     bindsym $mod+Home exec $volup
     bindsym $mod+End exec $voldown
+    bindsym $mod+Insert exec brightnessctl s +1%
+    bindsym $mod+Delete exec brightnessctl s 1%-
 #    bindsym $mod+Shift+w exec rfkill toggle 1 && notify-send "Wifi toggle"
 #    bindsym $mod+Shift+b exec rfkill toggle 0 && notify-send "bluetooth toggle"
 
@@ -111,8 +114,8 @@ xwayland enable
     bindsym $mod+x exec $replay
 
     # brightness(ctl)
-    bindsym $mod+Equal exec brightnessctl s +1%
-    bindsym $mod+Minus exec brightnessctl s 1%-
+#    bindsym $mod+Equal exec brightnessctl s +1%
+#    bindsym $mod+Minus exec brightnessctl s 1%-
 
     # suspend
     bindsym $mod+Shift+s exec systemctl suspend
