@@ -1,0 +1,14 @@
+
+default-timeout=5555
+padding=2
+border-radius=20
+
+# Colors
+
+background-color=#000000
+text-color=#e600e6
+border-color=#ea76cb
+progress-color=over #ccd0da
+
+[urgency=high]
+border-color=#fe640b
